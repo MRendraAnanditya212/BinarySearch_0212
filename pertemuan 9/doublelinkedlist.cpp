@@ -12,11 +12,18 @@ struct Node
     Node *prev;
 };
 
+void addNode()
+{
+    // pembuatan node pemberian value untuk data noMhs dan name 
+    Node *newNode = new Node(); // step 1 buat node baru
+    cout << "\nEnter the roll number of the student: ";
+    cin >> newNode->noMhs; // Assign value to the data field of the new node
+    cout << "\nEnter the name of student: ";
+    cin >> newNode->name; // Assign value to the data field of th
+
 // deklarasi pointer SMART dan pemberian nilai 
 Node *START = NULL;
 // deklarasi prosedur addNode 
-void addNode()
-{
 
     
 
@@ -24,12 +31,16 @@ void addNode()
     // kondisi jika star == null atau noMhs node baru <= noMhs start
     if (START == NULL || newNode->noMhs <= START->noMhs)
     {
-        // step 2; insert the new node at the beginning
-        // kondisi jika star tidak kosong dan noMhs node baru sama dengan noMhs
-        if (START )
+        
+    newNode->next = START; // step 3: make the new node point to the first node
+    // kondisi jika start tidak memiliki nilai atau tidak kosong 
+    if (START != NULL)
+    {
+        START->prev = newNode; // step 4: make the first node point to the line
+    }
 
-
-    
+    }
+}    
 
 
 
